@@ -16,6 +16,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Directory to publish (adjust if necessary)
+          publish_dir: ./  # Adjust this if your files are in a different directory
           publish_branch: gh-pages  # Change to the branch for your GitHub Pages repo
-          publish_repo: itsethemmiss.github.io:gh-pages
+          publish_repo: itsethemmiss.github.io  # Corrected format
