@@ -118,7 +118,7 @@ else:
                 inputContainer.className = 'flex items-center mt-2';
                 
                 const prompt = document.createElement('span');
-                prompt.textContent = 'What type of ethem miss do you want (miss, sir, beldagli): ';
+                prompt.textContent = 'What type of ethem miss do you want (miss, sir): ';
                 prompt.className = 'text-terminal-prompt';
                 
                 const input = document.createElement('input');
@@ -167,8 +167,7 @@ else:
                 await addOutput("\nIts ethem miss");
             } else if (ethem === "sir") {
                 await addOutput("\nIts ethem sir");
-            } else if (ethem === "beldagli") {
-                await addOutput("Its ethem boldegus beldagus");
+       
             } else {
                 await addOutput("\nWe do not support that ethem miss");
             }
