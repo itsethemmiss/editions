@@ -1,13 +1,8 @@
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main  # Change this to your default branch if it's not 'main'
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -16,6 +11,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Adjust this if your files are in a different directory
-          publish_branch: gh-pages  # Change to the branch for your GitHub Pages repo
-          publish_repo: itsethemmiss.github.io  # Corrected format
+          publish_dir: ./public
+          publish_branch: gh-pages
