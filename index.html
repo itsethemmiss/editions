@@ -114,7 +114,7 @@ else:
                 inputContainer.className = 'flex items-center mt-2';
                 
                 const prompt = document.createElement('span');
-                prompt.textContent = 'What type of ethem miss do you want: ';
+                prompt.textContent = 'What type of ethem miss do you want (miss, sir, beldagli): ';
                 prompt.className = 'text-terminal-prompt';
                 
                 const input = document.createElement('input');
@@ -151,7 +151,7 @@ else:
             runBtn.textContent = 'Running...';
             
             // Clear terminal
-            terminal.innerHTML = '<div class="text-terminal-prompt">$ python3 ethem_program.py</div>';
+            terminal.innerHTML = '';
             
             // Get user input
             const ethem = await createInputField();
