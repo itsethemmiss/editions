@@ -1,0 +1,34 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this if your default branch is different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js (optional, if you need it for your build)
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Adjust version as needed
+
+      - name: Build project (optional, if you have a build step)
+        run: |
+          # Add your build commands here, if needed
+          # For example, if using a static site generator:
+          # npm install
+          # npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # Adjust if your index.html is in a subdirectory
+          publish_branch: gh-pages  # The branch where GitHub Pages will be served from
+          publish_repo: itsethemmiss/python  # Your repository name
