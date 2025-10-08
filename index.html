@@ -280,7 +280,7 @@
             await new Promise(resolve => setTimeout(resolve, 500));
             const promptDiv = document.createElement('div');
             promptDiv.className = 'text-terminal-prompt mt-4';
-            promptDiv.textContent = '$ ';
+            promptDiv.textContent = '';
             terminal.appendChild(promptDiv);
             
             // Scroll to bottom
