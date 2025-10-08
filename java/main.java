@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("What type of ethem miss do you want (miss, sir, beldagli): ");
+        System.out.print("What type of ethem miss do you want (miss, sir): ");
         String ethem = scanner.nextLine().toLowerCase();
 
         if (ethem.equals("miss")) {
