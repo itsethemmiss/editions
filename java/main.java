@@ -10,8 +10,7 @@ public class Main {
             System.out.println("\nIts ethem miss");
         } else if (ethem.equals("sir")) {
             System.out.println("\nIts ethem sir");
-        } else if (ethem.equals("beldagli")) {
-            System.out.println("Its ethem boldegus beldagus");
+        }
         } else {
             System.out.println("\nWe do not support that ethem miss");
         }
