@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>its ethem miss</title>
+    <title>its ethem miss: terminal version</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="logo.png" type="image/png">
+       <link rel="icon" href="logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@300;800&display=swap" rel="stylesheet">
+   
     <script>
         tailwind.config = {
             theme: {
@@ -22,101 +23,51 @@
             }
         }
     </script>
-    <style>
-        body { font-family: 'Google Sans Code', sans-serif; font-weight: 300; }
-        h1, h2, h3, h4 { font-weight: 800; }
-        
-        .language-badge {
-            background: linear-gradient(135deg, var(--lang-color-1), var(--lang-color-2));
-        }
-        
-        .js-badge {
-            --lang-color-1: #f7df1e;
-            --lang-color-2: #f0db4f;
-            color: #323330;
-        }
-        
-        .python-badge {
-            --lang-color-1: #3776ab;
-            --lang-color-2: #4b8bbe;
-            color: white;
-        }
-        
-        .react-badge {
-            --lang-color-1: #61dafb;
-            --lang-color-2: #21d4fd;
-            color: #20232a;
-        }
-        
-        .node-badge {
-            --lang-color-1: #339933;
-            --lang-color-2: #68cc68;
-            color: white;
-        }
-        
-        .vue-badge {
-            --lang-color-1: #4fc08d;
-            --lang-color-2: #42b883;
-            color: white;
-        }
-        
-        .typescript-badge {
-            --lang-color-1: #3178c6;
-            --lang-color-2: #4a90e2;
-            color: white;
-        }
-        
-        .c-badge {
-            --lang-color-1: #00599C;
-            --lang-color-2: #004482;
-            color: white;
-        }
-        
-        .java-badge {
-            --lang-color-1: #ED8B00;
-            --lang-color-2: #f89500;
-            color: white;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
-    <div class="min-h-screen py-12 px-4 font-google">
-        <div class="max-w-6xl mx-auto">
-            <!-- Header -->
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl text-gray-900 dark:text-white mb-4">
-                    Terminal editions
-                </h1>
-                <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                    A showcase of our terminal editions of its ethem miss
-                </p>
+<body class="bg-gray-100 dark:bg-gray-900 min-h-screen transition-colors duration-300">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 dark:text-white mb-2">Its ethem miss</h1>
+            <p class="text-gray-600 dark:text-gray-300">terminal version</p>
+            <a href="https://github.com/itsethemmiss/java" target="_blank" class="inline-flex items-center mt-2 px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white text-sm font-medium rounded hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+        <img src="../github.svg" alt="GitHub" class="w-4 h-4 mr-2">
+        Github
+    </a>
+        </div>
+
+        <!-- Terminal Window -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-2xl overflow-hidden border border-gray-200 dark:border-gray-700">
+            <!-- Terminal Header -->
+            <div class="bg-gray-200 dark:bg-gray-700 px-4 py-3 flex items-center space-x-2">
+
+                <div class="flex-1 text-center">
+
+                </div>
+                <button id="runBtn" class="px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white text-sm rounded transition-colors duration-200">
+                    Run
+                </button>
             </div>
 
-            <!-- Projects Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project python -->
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700">
-                    <div class="p-6">
-                        <!-- Language Badge -->
-                        <div class="flex items-center justify-center h-24 mb-6">
-                            <div class="language-badge python-badge px-6 py-3 rounded-lg text-lg font-bold">
-                                Python
-                            </div>
-                        </div>
-                        
-                        <!-- Project Name -->
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                            Python edition
-                        </h3>
-                        
-                        <!-- Description -->
-                        <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">
-                            The python edition of the terminal edition
-                        </p>
-                        
-                        <!-- Buttons -->
-                        <div class="flex gap-3">
-                            <a href="python/" 
+            <!-- Terminal Content -->
+            <div class="bg-terminal-bg p-6 h-96 overflow-y-auto font-mono text-sm">
+                <div id="terminal" class="text-terminal-text">
+
+                    <div class="mt-2">Click "Run" to start the program</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Program Code Display -->
+        <div class="mt-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+            <div class="bg-gray-50 dark:bg-gray-700 px-4 py-3 border-b border-gray-200 dark:border-gray-600">
+                <h3 class="text-center text-lg font-semibold text-gray-800 dark:text-white">Program Code</h3>
+            </div>
+            <div class="p-6">
+<p class="text-gray-600 dark:text-gray-300 text-center">Python Edition</p><br>
+              <div class="flex gap-3"> 
+                            <a href="https://www.onlineide.pro/playground/share/45956c3e-80fa-4465-b37b-bfa6bcbd7870" 
                                class="flex-1 bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-lg font-medium text-center transition-colors text-base">
                                 Demo
                             </a>
@@ -128,92 +79,21 @@
                                 GitHub
                             </a>
                         </div>
-                    </div>
-                </div>
-                <!-- End of project python -->
-                
-                <!-- Project java-->
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700">
-                    <div class="p-6">
-                        <!-- Language Badge -->
-                        <div class="flex items-center justify-center h-24 mb-6">
-                            <div class="language-badge java-badge px-6 py-3 rounded-lg text-lg font-bold">
-                                Java
-                            </div>
-                        </div>
-                        
-                        <!-- Project Name -->
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                            Java edition
-                        </h3>
-                        
-                        <!-- Description -->
-                        <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">
-                            The java edition of the terminal edition
-                        </p>
-                        
-                        <!-- Buttons -->
-                        <div class="flex gap-3">
-                            <a href="java/" 
-                               class="flex-1 bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-lg font-medium text-center transition-colors text-base">
-                                Demo
-                            </a>
-                            <a href="https://github.com/itsethemmiss/editions/tree/main/java/" 
-                               class="flex items-center gap-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-2 px-4 rounded-lg font-medium transition-colors text-base">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of project java -->
-                
-                <!-- Project C -->
-                <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700">
-                    <div class="p-6">
-                        <!-- Language Badge -->
-                        <div class="flex items-center justify-center h-24 mb-6">
-                            <div class="language-badge c-badge px-6 py-3 rounded-lg text-lg font-bold">
-                                C
-                            </div>
-                        </div>
-                        
-                        <!-- Project Name -->
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                            C edition
-                        </h3>
-                        
-                        <!-- Description -->
-                        <p class="text-gray-600 dark:text-gray-400 mb-6 line-clamp-3">
-                            The c edition of the terminal edition
-                        </p>
-                        
-                        <!-- Buttons -->
-                        <div class="flex gap-3">
-                            <a href="c/" 
-                               class="flex-1 bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded-lg font-medium text-center transition-colors text-base">
-                                Demo
-                            </a>
-                            <a href="https://github.com/itsethemmiss/editions/tree/main/c/" 
-                               class="flex items-center gap-2 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 py-2 px-4 rounded-lg font-medium transition-colors text-base">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of project C -->
-                
+                <pre class="bg-gray-100 dark:bg-gray-900 p-4 rounded-lg text-sm font-mono overflow-x-auto text-gray-800 dark:text-gray-200"><code>ethem = input("What type of ethem miss do you want: ").lower()
+ethem = input("What type of ethem miss do you want (miss, sir): ").lower()
+if ethem == "miss":
+    print("\nIts ethem miss")
+elif ethem == "sir":
+    print("\nIts ethem sir")
+else:
+    print("\nWe do not support that ethem miss")
+</code></pre>
             </div>
         </div>
     </div>
 
     <script>
-        // Dark mode support
+        // Dark mode detection and handling
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.documentElement.classList.add('dark');
         }
@@ -224,6 +104,110 @@
                 document.documentElement.classList.remove('dark');
             }
         });
+
+        const terminal = document.getElementById('terminal');
+        const runBtn = document.getElementById('runBtn');
+
+        function typeText(element, text, speed = 30) {
+            return new Promise(resolve => {
+                let i = 0;
+                const timer = setInterval(() => {
+                    element.textContent += text[i];
+                    i++;
+                    if (i >= text.length) {
+                        clearInterval(timer);
+                        resolve();
+                    }
+                }, speed);
+            });
+        }
+
+        function createInputField() {
+            return new Promise(resolve => {
+                const inputContainer = document.createElement('div');
+                inputContainer.className = 'flex items-center mt-2';
+                
+                const prompt = document.createElement('span');
+                prompt.textContent = 'What type of ethem miss do you want (miss, sir): ';
+                prompt.className = 'text-terminal-prompt';
+                
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'bg-transparent border-none outline-none text-terminal-input font-mono text-sm flex-1';
+                input.style.color = '#ffff00';
+                
+                inputContainer.appendChild(prompt);
+                inputContainer.appendChild(input);
+                terminal.appendChild(inputContainer);
+                
+                input.focus();
+                
+                input.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        const value = input.value.toLowerCase();
+                        input.disabled = true;
+                        input.style.opacity = '0.8';
+                        resolve(value);
+                    }
+                });
+            });
+        }
+
+        function addOutput(text, className = 'text-terminal-text') {
+            const output = document.createElement('div');
+            output.className = `mt-2 ${className}`;
+            terminal.appendChild(output);
+            return typeText(output, text);
+        }
+
+        async function runProgram() {
+            runBtn.disabled = true;
+            runBtn.textContent = 'Running...';
+            
+            // Clear terminal
+            terminal.innerHTML = '';
+            
+            // Get user input
+            const ethem = await createInputField();
+            
+            // Process input and show output
+            await new Promise(resolve => setTimeout(resolve, 500)); // Small delay for realism
+            
+            if (ethem === "miss") {
+                await addOutput("\nIts ethem miss");
+            } else if (ethem === "sir") {
+                await addOutput("\nIts ethem sir");
+       
+            } else {
+                await addOutput("\nWe do not support that ethem miss");
+            }
+            
+            // Add completion prompt
+            await new Promise(resolve => setTimeout(resolve, 500));
+            const promptDiv = document.createElement('div');
+            promptDiv.className = 'text-terminal-prompt mt-4';
+            promptDiv.textContent = '$ ';
+            terminal.appendChild(promptDiv);
+            
+            // Scroll to bottom
+            terminal.scrollTop = terminal.scrollHeight;
+            
+            runBtn.disabled = false;
+            runBtn.textContent = 'Run';
+        }
+
+        runBtn.addEventListener('click', runProgram);
+
+        // Auto-focus and keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'F5' || (e.ctrlKey && e.key === 'r')) {
+                e.preventDefault();
+                runProgram();
+            }
+        });
     </script>
+    <footer class="relative z-10 text-center py-8 text-gray-500 dark:text-gray-400">
+        <p>&copy; 2025 Its Ethem Miss (Ethem Beldagli, James Davies and Aarav Jajoo)</p>
+    </footer>
 </body>
 </html>
